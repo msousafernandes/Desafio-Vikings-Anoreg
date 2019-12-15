@@ -1,0 +1,79 @@
+date/time         : 2019-12-12, 00:03:12, 285ms
+computer name     : CTS-DF-ENG-0718
+user name         : marcelo.fernandes
+registered owner  : Usuário do Windows
+operating system  : Windows NT New x64 build 9200
+system language   : Portuguese
+system up time    : 14 hours 45 minutes
+program up time   : 11 seconds
+processors        : 8x Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+physical memory   : 1898/8101 MB (free/total)
+free disk space   : (C:) 117,31 GB
+display mode      : 1366x768, 32 bit
+process id        : $5974
+allocated memory  : 18,12 MB
+command line      : C:\xampp\sendmail\sendmail.exe -t
+executable        : sendmail.exe
+exec. date/time   : 2012-04-16 14:30
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $524b9ad3, $91b672ba, $91b672ba
+exception number  : 1
+exception class   : EIdConnectTimeout
+exception message : Connect timed out.
+
+main thread ($4cc0):
+0041fa42 +000e sendmail.exe IdException                    112   +1 EIdException.Toss
+0044092e +014e sendmail.exe IdIOHandlerStack               279  +38 DoConnectTimeout
+00440b4c +01d8 sendmail.exe IdIOHandlerStack               346  +55 TIdIOHandlerStack.ConnectClient
+0046554d +0031 sendmail.exe IdSSLOpenSSL                  2086   +8 TIdSSLIOHandlerSocketOpenSSL.ConnectClient
+00444a9f +0063 sendmail.exe IdIOHandlerSocket              335  +13 TIdIOHandlerSocket.Open
+00465637 +0007 sendmail.exe IdSSLOpenSSL                  2122   +1 TIdSSLIOHandlerSocketOpenSSL.Open
+0044157d +0235 sendmail.exe IdTCPClient                    318  +53 TIdTCPClientCustom.Connect
+00445cc8 +00a4 sendmail.exe IdExplicitTLSClientServerBase  257  +23 TIdExplicitTLSClient.Connect
+0045ab7b +0017 sendmail.exe IdSMTP                         373   +2 TIdSMTP.Connect
+004b5f14 +1060 sendmail.exe sendmail                       808 +326 initialization
+75c40417 +0017 KERNEL32.DLL                                         BaseThreadInitThunk
+
+thread $3654:
+75c40417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $5750:
+75c40417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $5b74:
+75c40417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fcac  47 fa 41 00 de fa ed 0e - 01 00 00 00 07 00 00 00  G.A.............
+0019fcbc  c0 fc 19 00 47 fa 41 00 - c0 51 44 02 34 b0 43 00  ....G.A..QD.4.C.
+0019fccc  08 b1 45 02 44 fd 19 00 - 10 fd 19 00 dc fc 19 00  ..E.D...........
+0019fcdc  7d 00 00 00 00 00 00 00 - 33 09 44 00 f4 fc 19 00  }.......3.D.....
+0019fcec  c8 4b 40 00 10 fd 19 00 - 1c fd 19 00 c8 4b 40 00  .K@..........K@.
+0019fcfc  10 fd 19 00 19 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fd0c  30 41 40 02 48 fd 19 00 - 51 0b 44 00 48 fd 19 00  0A@.H...Q.D.H...
+0019fd1c  50 fd 19 00 c8 4b 40 00 - 48 fd 19 00 14 3f 41 00  P....K@.H....?A.
+0019fd2c  b0 f5 3d 02 b0 f5 3d 02 - 90 69 43 02 00 00 00 00  ..=...=..iC.....
+0019fd3c  00 00 00 00 00 00 00 00 - b0 f5 3d 02 64 fd 19 00  ..........=.d...
+0019fd4c  52 55 46 00 78 fd 19 00 - c8 4b 40 00 64 fd 19 00  RUF.x....K@.d...
+0019fd5c  14 3f 41 01 b0 f5 3d 02 - ac fd 19 00 a5 4a 44 00  .?A...=......JD.
+0019fd6c  b0 f5 3d 02 3c 56 46 00 - 83 15 44 00 84 fd 19 00  ..=.<VF...D.....
+0019fd7c  5f 4d 40 00 ac fd 19 00 - d8 fd 19 00 c8 4b 40 00  _M@..........K@.
+0019fd8c  ac fd 19 00 14 3f 41 00 - b0 f5 3d 02 50 f4 3d 02  .....?A...=.P.=.
+0019fd9c  12 57 46 00 b0 f5 3d 02 - 00 00 00 00 50 f4 3d 02  .WF...=.....P.=.
+0019fdac  d0 fd 19 00 cd 5c 44 00 - 00 00 00 00 ff 00 00 00  .....\D.........
+0019fdbc  80 ab 45 00 14 3f 41 00 - 00 00 00 00 ff 00 00 00  ..E..?A.........
+0019fdcc  50 f4 3d 02 70 ff 19 00 - 1a 5f 4b 00 e4 fd 19 00  P.=.p...._K.....
+0019fddc  c8 4b 40 00 70 ff 19 00 - f0 fd 19 00 c8 4b 40 00  .K@.p........K@.
+
+disassembling:
+[...]
+0041fa38       mov     ebx, eax
+0041fa3a 112   mov     ecx, esi
+0041fa3c       mov     dl, 1
+0041fa3e       mov     eax, ebx
+0041fa40       call    dword ptr [eax]
+0041fa42     > call    -$1ad5b ($404cec)      ; System.@RaiseExcept
+0041fa47 113   pop     esi
+0041fa48       pop     ebx
+0041fa49       ret
